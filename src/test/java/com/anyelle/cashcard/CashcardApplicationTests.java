@@ -9,7 +9,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
@@ -33,9 +32,6 @@ class CashcardApplicationTests {
 				.withBasicAuth("sarah1", "abc123")
 				.getForEntity("/cashcards/99",
 						String.class);
-
-		System.out.println("AAAAAAAAAAA");
-		System.out.println(response);
 
 		DocumentContext documentContext = JsonPath.parse(response.getBody());
 		Number id = documentContext.read("$.id");
