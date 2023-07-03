@@ -19,7 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 		
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
+Java : clean java langage server workspace
 	implementation 'org.springframework.data:spring-data-jdbc'
     testImplementation 'com.h2database:h2'
 
